@@ -1,0 +1,13 @@
+
+provide:
+   timeit
+
+macro timeit{`{^iters, ^body}` or `{^body}` and iters is `1`} =
+   ```
+   iters = ^iters
+   start = +[new Date{}]
+   1..iters each _ ->
+      ^body
+   end = +[new Date{}]
+   [end - start] / iters
+   ```
