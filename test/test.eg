@@ -1,0 +1,7 @@
+
+require-macros:
+   earl-mocha ->
+      describe, it, before, after
+      xdescribe, xit
+      assert, asserts
+
